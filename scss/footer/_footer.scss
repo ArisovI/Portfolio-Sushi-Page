@@ -1,0 +1,71 @@
+.footer{
+    background: $footerColor;
+    padding: 50px 0;
+    &-main{
+        &__top{
+            @include flex(column, center, center);
+            &_item{
+                width: 100%;
+              border-top:  1px solid $grey;
+              border-bottom:  1px solid $grey;
+
+                input{
+                    display: none;
+                }
+                label{
+                    @include font-family('Myriad', 20px, $white);
+                    line-height: 50px;
+                    cursor: pointer;
+                    @include flex(row,space-between,center);
+                    padding: 0 10px;
+                }
+                input:checked ~ ul{
+                  display: block;
+                }
+                input:checked ~ label > .icon-keyboard_arrow_left{
+                    transform: rotate(-90deg);
+                }
+                ul{
+                    display: none;
+                    background: $titleColor;
+                    padding: 15px 10px;
+                    li{
+                        margin: 10px 0;
+                        a{
+                    @include font-family('Myriad', 14px, $white);
+                        }
+                    }
+                }
+            }
+        }
+        &__bottom{
+            @include flex(column, center, center);
+            text-align: center;
+            padding: 50px 0 0 0;
+            &_social{
+                margin: 10px 0;
+
+                a{
+                    span{
+                        font-size: 30px;
+                        color: white;
+                        margin: 0 5px;
+                    }
+                }
+            }
+            &_agreement{
+                margin: 10px 0;
+                a{
+                    @include font-family('Open Sans', 12px, $white);
+                    border-bottom: 1px solid $grey;
+                }
+            }
+            &_logo{
+                margin: 10px 0;
+                a{
+                    @include font-family('Open Sans', 18px, $white);
+                }
+            }
+        }
+    }
+}

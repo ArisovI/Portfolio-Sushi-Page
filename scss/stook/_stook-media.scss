@@ -1,0 +1,61 @@
+@media (min-width: 750px) {
+    .stook {
+        .stook-slider {
+            max-width: 750px;
+            position: relative;
+            .stook-dots{
+                @include pos-left(105%,40%);
+                @include flex(row,center,center);
+                & button{
+                    font-size: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    background: $grey;
+                    cursor: pointer;
+                    border: 1px solid $grey;
+                }
+                & li[class=slick-active] button {
+                    background: $hoverColor;
+                    border: 1px solid $hoverColor;
+                }
+            }
+            .icon-arrow-right2{
+                @include pos-right(106.5%,32%);
+                content: "\ea3c";
+                z-index: 5;
+                color: $grey;
+                    cursor: pointer;
+                    font-size: 25px;
+            }
+            .icon-arrow-left2{
+                @include pos-left(106.5%,32%);
+                content: "\ea3c";
+                z-index: 5;
+                color: $grey;
+                    cursor: pointer;
+                    font-size: 25px;
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .stook{
+        .caption{
+            padding: 50px 0;
+        }
+        .stook-slider{
+            max-width: 1137px;
+            .stook-dots{
+                @include pos-left(105%,43.5%);
+            }
+            .icon-arrow-right2{
+                @include pos-right(106.5%,38%);
+            }
+            .icon-arrow-left2{
+                @include pos-left(106.5%,38%);
+            }
+        }
+    }
+}

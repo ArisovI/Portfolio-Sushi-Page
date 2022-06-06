@@ -1,0 +1,44 @@
+@media (min-width: 750px) {
+    .contact {
+        background-image: url('../imgs/contact-2.png');
+        &-main {
+            &__btn {
+                @include flex(row, center, center);
+
+                input[type=text],
+                input[type=number] {
+                    width: 80%;
+                    margin: 10px;
+                }
+
+                input[type=button] {
+                    @include font-family('Myriad', 14px, $white);
+                    padding: 15px 60px;
+                    width: 50%;
+                    margin: 10px;
+                }
+            }
+            &__title{
+                line-height: 30.1px;
+                @include font-family('Lemons', 54px, $white);
+            }
+            &__questions{
+                @include font-family('Myriad', 16px, $white);
+                line-height: 24px;
+            }
+            &__text{
+                line-height: 30.1px;
+                @include font-family('Myriad', 12px, $white);
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .contact{
+        background-image: url('../imgs/contact-3.png');
+        overflow: hidden;
+        &-main{
+            transform: translate(300px, 0);
+        }
+    }
+}

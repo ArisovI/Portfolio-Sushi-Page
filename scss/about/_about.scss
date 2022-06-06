@@ -1,0 +1,38 @@
+.about{
+    padding: 50px 10px;
+    &-caption{
+        text-align: center;
+        @include font-family('Lemons', 44px, $titleColor);
+        line-height: 28.43px;
+    }
+    &-main{
+       /*  &__picture{
+            display: none;
+        } */
+        &__text{
+            @include flex(column, center, center);
+            &_title{
+                margin: 50px 0 25px 0;
+                text-align: center;
+                h3{
+        @include font-family('Open Sans', 20px, $titleColor);
+                    font-weight: 700;
+                }
+            }
+            &_text{
+                margin: 10px 0;
+                text-align: left;
+               .about-text{
+                p{
+                    @include font-family('Open Sans', 14px, $titleColor);
+                       line-height: 20px;
+                       margin: 10px 0;
+                   }
+               }
+               .about-picture{
+                   display: none;
+               }
+            }
+        }
+    }
+}

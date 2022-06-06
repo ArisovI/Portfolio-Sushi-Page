@@ -1,0 +1,121 @@
+.header{
+    height: 56px;
+    position: relative;
+    &-logo{
+        &__street,
+        &__index,
+        &__number,
+        &__call{
+            display: none;
+        }
+        &__logo{
+            @include pos-left(9%, 42%);
+            .logo__picture{
+                display: none;
+            }
+        }
+    }
+    &-menu{
+        &__items{
+            .first,
+            .second,
+            .third,
+            .fourth{
+                display: none;
+            }
+            .fifth{
+                @include pos-right(21%, 19%);
+                a{
+                    cursor: pointer;
+                    .text{
+                        display: none;
+                    }
+                    .icon-people_outline{
+                        font-size: 32px;
+                        color: $greenColor;
+                    }
+                }
+            }
+            .sixth{
+                @include pos-right(30%, 5%);
+                a{
+                    cursor: pointer;
+                    .text{
+                        display: none;
+                    }
+                    .icon-shopping-cart{
+                        font-size: 23px;
+                        color: $greenColor;
+                    }
+                }
+            }
+        }
+        &__hamburger{
+            input[type=checkbox]{
+                display: none;
+            }
+
+            input[type=checkbox]:checked ~ ul{
+                left: 0;
+            }
+
+            input[type=checkbox]:checked ~ .hamburger-btn > span{
+                transform: rotate(45deg);
+            }
+            input[type=checkbox]:checked ~ .hamburger-btn > span::after{
+                transform: rotate(45deg);
+                opacity: 0;
+            }
+            input[type=checkbox]:checked ~ .hamburger-btn > span::before{
+                transform: rotate(90deg);
+                top: 0;
+            }
+
+            .hamburger-btn{
+                .not{
+                    display: none;
+                }
+                span,
+                span::after,
+                span::before{
+                    content: '';
+                    @include pos-left(48%, 5%);
+                    width: 25px;
+                    height: 3px;
+                    background: $greenColor;
+                    cursor: pointer;
+                    z-index: 3;
+                    transition: 0.5s;
+                }
+                span::after{
+                    top: -6px;
+                    left: 0;
+                }
+                span::before {
+                    top: 6px;
+                    left: 0;
+                }
+            }
+
+            ul{
+                @include pos-left(0,-100%);
+                width: 100vw;
+                height: 50vh;
+                background: rgba(0, 0, 0, 0.767);
+                z-index: 2;
+                transition: 1s;
+                @include flex(column, center, center);
+                li{
+                    margin: 15px 0;
+                    a{
+                        @include font-family('Open Sans', 18px, $white);
+                        text-transform: uppercase;
+                        &:hover {
+                            color: $hoverColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

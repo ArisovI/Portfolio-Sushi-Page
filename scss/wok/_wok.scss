@@ -1,0 +1,209 @@
+.wok {
+    padding: 0 0 50px 0;
+
+    &-caption {
+        text-align: center;
+        padding: 50px 0;
+        @include font-family('Lemons', 44px, $titleColor);
+        font-weight: normal;
+        line-height: 28.43px;
+    }
+
+    .wok-slider {
+        
+        .wok-slider__item {
+            position: relative;
+            margin: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px $black;
+            padding: 0 25px;
+
+            .item__picture {
+                @include flex(row, center, center);
+                padding: 25px;
+            }
+
+            .item__text {
+                text-align: center;
+
+                .text__title {
+                    margin: 10px 0;
+                    text-align: center;
+
+                    span {
+                        @include font-family('Open Sans', 20px, $black);
+                        font-weight: 700;
+                        line-height: 28.43px;
+
+                    }
+                }
+
+                .text__number {
+                    margin: 10px 0;
+
+                    span {
+                        @include font-family('Open Sans', 12px, $black);
+                        font-weight: 300;
+                        line-height: 20px;
+                        border-right: 1px solid $black;
+                        padding: 0 5px;
+                    }
+
+                    span:nth-child(3) {
+                        border: none;
+                    }
+                }
+
+                .text__add {
+                    @include flex(row, space-between, center);
+
+                    .add {
+                        @include font-family('Myriad', 12px, $black);
+                        line-height: 28.43px;
+                        font-weight: 400;
+                    }
+
+                    .numbers {
+                        @include font-family('Open Sans', 12px, $black);
+                        line-height: 28.43px;
+                        font-weight: 300;
+                        background: $iconColor;
+                        padding: 0px 5px;
+                        @include flex(row, center, center);
+                        cursor: pointer;
+                        border-radius: 5px;
+
+                        span {
+                            margin: 0 3px;
+                            color: $black;
+                        }
+                    }
+
+                    .cost {
+                        @include font-family('Open Sans', 12px, $black);
+                        line-height: 28.43px;
+                        font-weight: 300;
+
+                        span {
+                            @include font-family('Open Sans', 10px, $black);
+                            line-height: 28.43px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .icon-plus {
+                        padding: 4px;
+                        color: $white;
+                        background: $orangeColor;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+                .text__choice {
+                    position: relative;
+                    margin: 10px 0;
+                    input {
+                        display: none;
+                    }
+
+                    label {
+                        @include font-family('Open Sans', 12px, $black);
+                        line-height: 28.43px;
+                            border-radius: 2px;
+                            font-weight: 300;
+                        cursor: pointer;
+                        background: rgba(214, 212, 212, 0.89);
+                        @include flex(row, space-between, center);
+                        padding: 0 0 0 10px;
+                        .icon-keyboard_arrow_down{
+                            background: whitesmoke;
+                            padding: 8.5px 8px;
+                            border-radius: 2px;
+                        }
+                    }
+
+                    input:checked~ul {
+                        display: block;
+                    }
+
+                    ul {
+                        @include pos-left(30px, 0%);
+                        z-index: 5;
+                        background: $white;
+                        width: 100%;
+                        border: 1px solid $black;
+                        display: none;
+                        li {
+                            @include font-family('Open Sans', 12px, $black);
+                            font-weight: 300;
+                            width: 100%;
+                            text-align: left;
+                            padding: 0 0 0 5px;
+
+                            &:hover {
+                                color: $white;
+                                background: blue;
+                            }
+                        }
+                    }
+                }
+
+                .text__costs {
+                    @include flex(row, space-evenly, center);
+                    margin: 10px 0;
+                    width: 100%;
+
+                    .cost {
+                        @include font-family('Roboto Slab', 22px, $black);
+                        font-weight: 700;
+                        line-height: 28.43px;
+
+                        span {
+                            font-weight: 28.43px;
+                            font-weight: normal;
+                            @include font-family('Myriad', 12px, $black);
+                        }
+                    }
+
+                    .price {
+                        @include font-family('Myriad', 14px, $black);
+                        font-weight: 28.43px;
+
+                        span {
+                            font-size: 11px;
+                            margin: 0 10px;
+                        }
+                    }
+                }
+
+                .text__box {
+                    padding: 25px 0;
+                    @include flex(row, center, center);
+
+                    a {
+                        input[type=checkbox] {
+                            display: none;
+                        }
+
+                        label {
+                            padding: 13px 25px;
+                            background: $orangeColor;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                            span {
+                                @include font-family('Open Sans', 14px, $white);
+                                line-height: 28.43px;
+                                text-transform: uppercase;
+                                background: $orangeColor;
+                                margin: 0 0 0 5px;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

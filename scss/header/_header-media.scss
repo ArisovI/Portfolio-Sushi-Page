@@ -1,0 +1,261 @@
+@media (min-width: 750px) {
+    .header {
+        height: 87px;
+
+        &-logo {
+            &__logo {
+                top: 10%;
+
+                .logo__picture-mob {
+                    display: none;
+                }
+
+                .logo__picture {
+                    display: block;
+                }
+            }
+        }
+
+        &-menu {
+            &__items {
+                .fifth {
+                    top: 29%;
+                    right: 14%;
+
+                    a {
+                        .icon-people_outline {
+                            font-size: 40px;
+                        }
+                    }
+                }
+
+                .sixth {
+                    top: 32%;
+
+                    a {
+                        .icon-shopping-cart {
+                            font-size: 32px;
+                            color: $greenColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1170px) {
+    .header {
+        height: 150px;
+
+        &-logo {
+            @include flex(row, space-between, center);
+            height: 99px;
+
+            &__street,
+            &__index,
+            &__number,
+            &__call {
+                display: block;
+
+                .street__text {
+                    .icon-location {
+                        color: $greenColor;
+                        margin: 0 5px 0 0;
+                    }
+
+                    @include font-family('Myriad', 14px, $black);
+                }
+
+                .index__text {
+                    .icon-envelope {
+                        color: $greenColor;
+                        margin: 0 5px 0 0;
+                    }
+
+                    @include font-family('Myriad', 14px, $black);
+                }
+
+                .number__phone {
+                    @include font-family('Open Sans', 18px, $black);
+                }
+
+                .number__schedule {
+                    @include font-family('Myriad', 10px, $black);
+                }
+
+                .call__text {
+                    .call__btn {
+                        @include font-family('Open Sans', 15px, $greenColor);
+                        text-transform: uppercase;
+                        padding: 14px 18px;
+                        border-radius: 7px;
+                        border: 1px solid $greenColor;
+                        cursor: pointer;
+
+                        &:active {
+                            background: $greenColor;
+                            color: $white;
+                        }
+                    }
+                }
+
+            }
+
+            &__logo {
+                position: static;
+            }
+
+        }
+
+        &-menu {
+            @include flex(row, center, center);
+            height: 51px;
+
+            &__hamburger {
+                position: relative;
+
+                .hamburger-btn {
+                    span {
+                        display: none;
+                    }
+
+                    .not {
+                        display: block;
+                        @include font-family('Open Sans', 14px, $black);
+                        font-weight: 600;
+                        margin: 1px 0 0 0;
+                        text-transform: uppercase;
+                        padding: 16px 22px 15px 24px;
+                        transition: 0.5s;
+                        cursor: pointer;
+                        position: relative;
+
+                        &::before {
+                            content: "\e90f";
+                            @include pos-right(30%, 3%);
+                            font-family: 'icomoon';
+                            font-size: 18px;
+                            transition: 0.2s;
+                        }
+
+                        &:hover {
+                            color: $white;
+                            background-color: $greenColor;
+                        }
+                    }
+                }
+
+                input:checked~.hamburger-btn .not::before {
+                    transform: rotate(90deg);
+                }
+
+                input:checked~.hamburger-btn .not {
+                    color: $white;
+                    background-color: $greenColor;
+                }
+
+                input:checked~ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                ul {
+                    @include pos-left(auto, auto);
+                    width: auto;
+                    height: auto;
+                    background: $greenColor;
+                    opacity: 0;
+                    transition: 0.5s;
+                    visibility: hidden;
+
+                    li {
+                        padding: 12px 0.6px
+                            /* 16.6px */
+                        ;
+                        margin: 0;
+                        background: $greenColor;
+                        text-align: center;
+
+                        &:hover {
+                            background: $white;
+                        }
+
+                        &:hover a {
+                            color: $greenColor;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            margin: 0;
+                            padding: 12px 16px;
+                        }
+                    }
+
+                    li:nth-child(3) {
+                        a {
+                            padding: 12px 21.1px;
+                        }
+                    }
+                }
+            }
+
+            &__items {
+                @include flex(row, center, center);
+
+                .first,
+                .second,
+                .third,
+                .fourth {
+                    display: block;
+                }
+
+                .item {
+
+                    a {
+                        @include font-family('Open Sans', 14px, $black);
+                        font-weight: 600;
+                        padding: 14px 35px;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $greenColor;
+                        }
+                    }
+                }
+
+                .fifth,
+                .sixth {
+                    position: static;
+
+                    a {
+                        @include flex(row, center, center);
+                        margin-top: 1px;
+
+                        &:hover .icon-people_outline {
+                            color: $white;
+                        }
+
+                        &:hover .icon-shopping-cart {
+                            color: $white;
+                        }
+
+                        .text {
+                            display: block;
+                        }
+
+                        .icon-people_outline,
+                        .icon-shopping-cart {
+                            transition: 0.5s;
+                            font-size: 19px;
+                            margin: 0 5px 0 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

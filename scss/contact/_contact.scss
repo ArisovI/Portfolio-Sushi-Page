@@ -1,0 +1,50 @@
+.contact{
+    background-image: url('../imgs/contact-1.png');
+    margin: 50px 0 0 0;
+    background-size: 100% 100%;
+    &-main{
+        @include flex(column, center,flex-start);
+        padding: 50px 10px;
+        &__questions{
+            margin: 10px 0;
+            @include font-family('Myriad', 15px, $white);
+        }
+        &__title{
+            @include font-family('Lemons', 44px, $white);
+            margin: 10px 0;
+        }
+        &__btn{
+            input[type=text],
+            input[type=number]{
+                background: transparent;
+                border: none;
+                padding:10px;
+                width: 100%;
+                border-bottom: 1px solid $white;
+                margin: 10px 0;
+                outline: none;
+            }
+            input[type=text]:focus,
+            input[type=number]:focus{
+                background: $greyBtn;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+            input[type=button]{
+                @include font-family('Myriad', 15px, $white);
+                padding: 15px 100px;
+                width: 100%;
+                border-radius: 5px;
+                background: $orangeColor;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        &__text{
+            margin: 10px 0;
+            @include font-family('Myriad', 15px, $white);
+        }
+    }
+}

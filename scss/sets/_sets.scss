@@ -1,0 +1,153 @@
+.sets {
+    padding: 0 0 10px 0;
+    @include flex(column, center, center);
+
+    &-caption {
+        text-align: center;
+        padding: 50px 0;
+        @include font-family('Lemons', 44px, $titleColor);
+        font-weight: normal;
+        line-height: 28.43px;
+    }
+
+    .sets-slider {
+        max-width: 100%;
+        margin: 0 auto;
+position: relative;
+         .icon-arrow-right2{
+            @include pos-right(106.5%,32%);
+            content: "\ea3c";
+            z-index: 5;
+            color: $grey;
+                cursor: pointer;
+                font-size: 25px;
+        }
+        .icon-arrow-left2{
+            @include pos-left(106.5%,32%);
+            content: "\ea3c";
+            z-index: 5;
+            color: $grey;
+                cursor: pointer;
+                font-size: 25px;
+        }
+
+        .sets-slider__item {
+            box-shadow: 0 0 5px $black;
+            margin: 5px 10px;
+            border-radius: 10px;
+
+            .item__picture {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                position: relative;
+                    .rin{
+                        @include pos-right(5%, 5%);
+                        @include font-family('Roboto Slab', 14px, $white);
+                        line-height: 12.46px;
+                        background: $hits;
+                        border-radius: 50%;
+                        padding: 14px 9px;
+                    }
+                    .rin-2{
+                        @include pos-right(5%, 5%);
+                        @include font-family('Roboto Slab', 14px, $white);
+                        line-height: 12.46px;
+                        background: $greenColor;
+                        border-radius: 50%;
+                        padding: 14px 9px;
+                    }
+            }
+
+            .item__text {
+                padding: 0 0 20px 0;
+
+                .name {
+                    h2 {
+                        @include font-family('Open Sans', 20px, $black);
+                        line-height: 28.43px;
+                        font-weight: 700;
+                        text-align: center;
+                        margin: 10px 0;
+                    }
+                }
+
+                .number {
+                    @include flex(row, center, center);
+                    margin: 10px 0;
+
+                    span {
+                        @include font-family('Open Sans', 12px, $black);
+                        font-weight: 300;
+                        line-height: 20px;
+                        border-right: 1px solid $black;
+                        padding: 0 5px;
+                    }
+
+                    span:nth-child(3) {
+                        border: none;
+                    }
+                }
+
+                .costs {
+                    @include flex(row, space-evenly, center);
+                    margin: 10px 0;
+
+                    .cost {
+                        p {
+                            @include font-family('Roboto Slab', 22px, $black);
+                            font-weight: 700;
+                            line-height: 28.43px;
+
+                            span {
+                                font-weight: 28.43px;
+                                font-weight: normal;
+                                @include font-family('Myriad', 12px, $black);
+                            }
+                        }
+                    }
+
+                    .numb {
+                        p {
+                            @include font-family('Myriad', 14px, $black);
+                            font-weight: 28.43px;
+
+                            span {
+                                font-size: 11px;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+
+                .box {
+                    padding: 10px 0;
+                    @include flex(row, center, center);
+
+                    a {
+                        input[type=checkbox] {
+                            display: none;
+                        }
+
+                        label {
+                            padding: 13px 10px;
+                            background: $orangeColor;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                            span {
+                                @include font-family('Open Sans', 14px, $white);
+                                line-height: 28.43px;
+                                text-transform: uppercase;
+                                background: $orangeColor;
+                                margin: 0 0 0 5px;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@media (min-width: 750px){
+    .main{
+
+        &-slider{
+    
+            .main-dots{
+                @include pos-left(90%, 45%);
+    
+            }
+            &__item{
+                background-image: url('../imgs/main-slider__middle.png');
+                padding: 71px 23px;
+                .item__btn{
+                    display: block;
+                    margin-top: 23px;
+                    input[type=button]{
+                        width: 150px;
+                        height: 53px;
+                        @include font-family('Open Sans', 15px, $white);
+                        text-transform: uppercase;
+                        background: $orangeColor;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        border: none;
+                    }
+                }
+                .item__title {
+                    h2 {
+                       font-size: 72px;
+                        width: 50%;
+                    }
+                }
+                .item__text {
+    
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                .item__skidki{
+                    @include pos-right(18%, 31%);
+                    font-size: 18.37px;
+                    padding: 23px 16px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1170px) {
+    .main{
+        &-slider{
+            .main-dots{
+                @include pos-left(90%, 47%);
+            }
+            &__item{
+                background-image: url('../imgs/main-slider.png');
+                padding: 150px 200px;
+                .item__title {
+                    h2 {
+                        font-size: 110px;
+                        width: 50%;
+                    }
+                }
+                .item__text{
+                    p{
+                        font-size: 26.38px;
+                    }
+                }
+                .item__skidki{
+                @include pos-right(25%, 27%);
+                font-size: 24.78px;
+                padding: 30px 20px;
+                }
+            }
+        }
+    }
+}

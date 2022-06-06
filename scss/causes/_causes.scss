@@ -1,0 +1,22 @@
+.causes {
+    &-caption {
+        @include font-family('Lemons', 44px, $titleColor);
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    &-main {
+        @include flex(column, center, center);
+
+        &__item {
+            margin: 30px 10px;
+            @include flex(column, center, center);
+            text-align: center;
+
+            span {
+                @include font-family('Open Sans', 16px, $black);
+                line-height: 28.43px;
+            }
+        }
+    }
+}

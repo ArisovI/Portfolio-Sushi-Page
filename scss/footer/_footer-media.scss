@@ -1,0 +1,33 @@
+@media (min-width: 750px){
+    .footer{
+        &-main{
+            &__bottom{
+            @include flex(row, space-between, center);
+
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .footer{
+        &-main{
+            &__top{
+                @include flex(row, flex-start,flex-start);
+                &_item{
+                    height: 100%;
+                    border: none;
+                    label{
+                        cursor: auto;
+                       .icon-keyboard_arrow_left{
+                           display: none;
+                       }
+                    }
+                    ul{
+                        display: block;
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}

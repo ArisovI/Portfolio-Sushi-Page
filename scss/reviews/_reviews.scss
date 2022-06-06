@@ -1,0 +1,87 @@
+.reviews{
+    padding: 0 15px;
+    &-caption{
+        padding: 50px 0;
+        @include font-family('Lemons', 44px, $titleColor);
+        line-height: 28.43px;
+        text-align: center;
+    }
+    &-main{
+        &__item{
+            border: 1px solid $grey;
+            margin: 10px 0;
+            padding: 30px 20px;
+            @include flex(column, flex-start, flex-start);
+            .top{
+                @include flex(row,center,center);
+
+                &__names{
+                    @include flex(column,center,center);
+                   p{
+                    @include font-family('Myriad', 15px, $titleColor);
+                    line-height: 28.43px;
+                   }
+                   span{
+                    @include font-family('Myriad', 15px, $grey);
+                    line-height: 28.43px;
+                   }
+                }
+            }
+            .center{
+                @include flex(column, flex-start, flex-start);
+                padding: 0 0 20px 0;
+                &__comment{
+                    span{
+                        @include font-family('Myriad', 15px, $black);
+                    line-height: 28.43px;
+                    }
+                }
+            }
+            .bottom{
+                border-top: 1px solid $grey;
+                padding: 10px 0 0 0;
+                &__like{
+                    @include flex(row,flex-start,flex-start);
+                    margin: 10px 0 15px 0;
+                    input{
+                        display: none;
+                    }
+                    label{
+                    @include flex(row,center,center);
+                        cursor: pointer;
+                        margin: 0 10px;
+                        @include font-family('Myriad', 15px, $black);
+                        span{
+                            font-size: 20px;
+                            margin: 0 5px;
+                        }
+                    }
+                    input:checked ~ label{
+                        color: red;
+                    }
+                }
+                &__btn{
+                   a{
+                    input{
+                        display: none;;
+                    }
+                    label{
+                        background: $blue;
+                        padding: 10px 57px;
+                        border-radius: 5px;
+                        @include font-family('Myriad', 16px, $white);
+                        line-height: 28.43px;
+                        cursor: pointer;
+                        span{
+                            margin: 0 5px;
+                        }
+                    }
+                   }
+                }
+            }
+        }
+        &__item:nth-child(3){
+            display: none;
+        }
+    }
+}

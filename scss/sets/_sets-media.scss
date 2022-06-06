@@ -1,0 +1,80 @@
+@media (min-width: 750px){
+    .sets{
+        .sets-slider{
+            max-width: 750px;
+            position: relative;
+            .sets-dots{
+                @include pos-left(105%,40%);
+                @include flex(row,center,center);
+                & button{
+                    font-size: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    background: $grey;
+                    cursor: pointer;
+                    border: 1px solid $grey;
+                }
+                & li[class=slick-active] button {
+                    background: $hoverColor;
+                    border: 1px solid $hoverColor;
+                }
+            }
+            
+            .icon-arrow-right2{
+                @include pos-right(106.5%,32%);
+                content: "\ea3c";
+                z-index: 5;
+                color: $grey;
+                    cursor: pointer;
+                    font-size: 25px;
+            }
+            .icon-arrow-left2{
+                @include pos-left(106.5%,32%);
+                content: "\ea3c";
+                z-index: 5;
+                color: $grey;
+                    cursor: pointer;
+                    font-size: 25px;
+            }
+            .sets-slider__item{
+                .item__picture{
+                    position: relative;
+                    .rin{
+                        @include pos-right(5%, 5%);
+                        @include font-family('Roboto Slab', 14px, $white);
+                        line-height: 12.46px;
+                        background: $hits;
+                        border-radius: 50%;
+                        padding: 14px 9px;
+                    }
+                    .rin-2{
+                        @include pos-right(5%, 5%);
+                        @include font-family('Roboto Slab', 14px, $white);
+                        line-height: 12.46px;
+                        background: $greenColor;
+                        border-radius: 50%;
+                        padding: 14px 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .sets{
+        .sets-slider{
+            max-width: 1137px;
+            .sets-dots{
+                @include pos-left(105%,43.5%);
+            }
+            .icon-arrow-right2{
+                @include pos-right(106.5%,38%);
+            }
+            .icon-arrow-left2{
+                @include pos-left(106.5%,38%);
+            }
+        }
+    }
+}
